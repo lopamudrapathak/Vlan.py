@@ -1,0 +1,39 @@
+Assignment 1
+------------
+
+(Open three terminal)
+
+sudo mn --topo single,4 --mac --controller=remote
+
+ryu-manager program_name.py
+
+sudo ovs-ofctl dump-flows s1 -O openflow13
+
+
+Assignmnt 2
+-----------
+
+(Open a new terminal)
+
+sudo mn --topo single,4
+
+(Open another one terminal)
+
+sudo ovs-vsctl add-br mybridge
+sudo ovs-vsctl show
+
+
+sudo ovs-vsctl del-port s1 s1-eth1
+sudo ovs-vsctl del-port s1 s1-eth2
+sudo ovs-vsctl del-port s1 s1-eth3
+sudo ovs-vsctl del-port s1 s1-eth4
+
+sudo ovs-vsctl add-port s1 s1-eth1 tag=20
+sudo ovs-vsctl add-port s1 s1-eth3 tag=20
+
+sudo ovs-vsctl add-port s1 s1-eth2 tag=30
+sudo ovs-vsctl add-port s1 s1-eth4 tag=30
+
+sudo ovs-vsctl show
+
+angain, in mininet > pingall
