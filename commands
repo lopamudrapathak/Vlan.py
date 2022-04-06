@@ -1,17 +1,6 @@
-Assignment 1
-------------
 
-(Open three terminal)
+OVS commands to put h1 and h3 in Vlan1 and h2 and h4 in Vlan2
 
-sudo mn --topo single,4 --mac --controller=remote
-
-ryu-manager program_name.py
-
-sudo ovs-ofctl dump-flows s1 -O openflow13
-
-
-Assignmnt 2
------------
 
 (Open a new terminal)
 
@@ -36,4 +25,4 @@ sudo ovs-vsctl add-port s1 s1-eth4 tag=30
 
 sudo ovs-vsctl show
 
-angain, in mininet > pingall
+again, in mininet > pingall
